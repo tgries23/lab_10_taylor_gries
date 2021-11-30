@@ -54,7 +54,13 @@ say("hello world",
 
 Use cowsay::say() to make a character say something to you.
 
+## Attach to github after the fact
 
+usethis::use_git() 
+
+usethis::usegit_hub()
+
+-do in the console since it is a onetime setup
 
 
 
