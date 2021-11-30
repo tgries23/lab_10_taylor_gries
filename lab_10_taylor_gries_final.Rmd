@@ -1,0 +1,72 @@
+---
+title: "Lab 10 Key"
+author: "Taylor Gries"
+date: "11/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(usethis)
+library(janitor)
+
+# New packages:
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
+```
+
+
+# beepr beeps
+
+Use the function `beep()` in the beepr package to make an audio alert when your code is done running.
+
+```{r}
+for (i in rev(seq(1:9999))) {
+  
+  print(paste(i, "bottles of beer on the wall"))
+}
+
+beep(4)
+```
+
+
+## praise and cowsay
+
+Packages built with a singe purpose: to be kind and fun. 
+
+```{r}
+praise("${Exclamation},${EXCLAMATION}...${exclamation}!!!")
+
+praise("Holy ${creating}, Batman - this code is ${ADJECTIVE}!")
+
+praise("You are fucking ${adjective}!!")
+
+say("hello world",
+    by = "hypnotoad",
+    what_color = c("royalblue1", "tomato2"),
+    by_color = c("rainbow", "rainbow"))
+```
+
+
+Use cowsay::say() to make a character say something to you.
+
+## Attach to github after the fact
+
+usethis::use_git() 
+
+usethis::usegit_hub()
+
+-do in the console since it is a onetime setup
+
+
+
+
+
+
+
+
+
