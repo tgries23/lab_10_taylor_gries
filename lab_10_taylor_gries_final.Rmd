@@ -58,12 +58,25 @@ Use cowsay::say() to make a character say something to you.
 
 usethis::use_git() 
 
-usethis::usegit_hub()
+usethis::use_github()
 
 -do in the console since it is a onetime setup
 
+-copy main code 
 
+## paletteer to access thousands of color palettes
 
+`View(palettes_d_names)` in console to see colors
+
+```{r}
+storms %>%
+  group_by(name) %>%
+  summarize(min_pressure = min(pressure, na.rm = TRUE)) %>%
+  slice_min(n = 10, min_pressure) %>%
+  ggplot(aes(x = min_pressure, y = name)) +
+  geom_col(aes(fill = name)) +
+  scale_fill_paletteer_d("beyonce::X120")
+```
 
 
 
