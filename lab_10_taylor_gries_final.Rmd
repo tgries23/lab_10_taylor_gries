@@ -78,7 +78,24 @@ storms %>%
   scale_fill_paletteer_d("beyonce::X120")
 ```
 
+## One spatial data example
 
+```{r}
+vegetation <- read_sf("doc.kml") %>%
+  select(Name) %>%
+  clean_names()
+
+ggplot(data = vegetation) +
+  theme_minimal() +
+  geom_sf(aes(fill = name), color = NA) +
+  scale_fill_paletteer_d("khroma::land") + 
+  labs(title = "Jornada Basin LTER Vegetation",
+       caption = "Jornada LTER") 
+```
+
+```{r}
+ggsave(filename = "jornada_basin_map_tg.jpg", width = 8, height = 5)
+```
 
 
 
